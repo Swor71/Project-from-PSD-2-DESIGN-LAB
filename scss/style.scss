@@ -23,7 +23,7 @@ $text-white: #ffffff;
       border-top: 2px solid $text-dark;
     }
     flex-grow: 1;
-    margin-right: 100px;
+    margin-right: 7%;
   }
   &::after {
     content: "";
@@ -33,7 +33,21 @@ $text-white: #ffffff;
       border-top: 2px solid $text-dark;
     }
     flex-grow: 1;
-    margin-left: 100px;
+    margin-left: 7%;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    top: 2px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 22px;
+    opacity: 0;
   }
 }
 
@@ -71,13 +85,13 @@ $text-white: #ffffff;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    width: 583px;
+    max-width: 583px;
+    width: 100%;
     margin: 0 auto;
     color: $text-white;
     font-family: Lato;
     text-transform: uppercase;
     text-align: center;
-
     .logo {
       width: 65px;
       height: 69px;
@@ -94,9 +108,27 @@ $text-white: #ffffff;
       font-weight: 400;
       line-height: 29px;
       letter-spacing: 0.9px;
+      margin-bottom: 30%;
     }
-    .hero-scroll-down {
-      margin-top: 180px;
+    .hero-scroll-down-bean {
+      height: 36px;
+      width: 20px;
+      border: 2px solid $text-white;
+      display: block;
+      margin: 0 auto;
+      border-radius: 50px;
+      position: relative;
+      .hero-scroll-down-line {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        position: absolute;
+        background-color: $text-white;
+        height: 8px;
+        width: 4px;
+        border-radius: 50px;
+        animation: scroll 2s infinite;
+      }
     }
   }
 }
@@ -117,7 +149,7 @@ $text-white: #ffffff;
   }
   .about-us-text {
     padding: 50px;
-    width: 556px;
+    max-width: 556px;
     margin: 0 auto;
     text-align: center;
     color: $text-dark;
@@ -158,7 +190,7 @@ $text-white: #ffffff;
       padding: 60px;
       text-align: center;
       p {
-        width: 556px;
+        max-width: 556px;
         text-align: center;
         font-size: 16px;
         font-weight: 300;
@@ -188,7 +220,7 @@ $text-white: #ffffff;
     text-align: center;
     .info {
       margin: 0 auto;
-      width: 556px;
+      max-width: 556px;
       color: $text-dark;
       font-family: Lato;
       img {
@@ -209,7 +241,7 @@ $text-white: #ffffff;
         font-size: 14px;
         font-weight: 300;
         line-height: 25.89px;
-        padding-bottom: 100px;
+        padding: 0 20px 100px;
       }
     }
   }
@@ -290,17 +322,19 @@ $text-white: #ffffff;
     font-size: 16px;
     text-align: center;
     margin: 0 auto;
-    padding: 50px 100px;
+    padding: 50px 0;
+    max-width: 556px;
+    width: 100%;
     p {
       color: $text-dark;
       font-weight: 300;
       line-height: 25.89px;
-      width: 530px;
       margin: 0 auto;
     }
     button {
       margin-top: 40px;
-      width: 395px;
+      max-width: 395px;
+      width: 100%;
       height: 58px;
       border: 2px solid $text-dark;
       background-color: $text-dark;
@@ -338,7 +372,7 @@ $text-white: #ffffff;
 
 @media (max-width: 1024px) {
   .hero {
-    background-position: 50% 50%;
+    background-position: 70% 50%;
   }
 }
 
@@ -348,5 +382,71 @@ $text-white: #ffffff;
       width: 40%;
       margin: 5px;
     }
+  }
+}
+
+@media (max-width: 902px) {
+  @mixin center {
+    width: 95%;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .border {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .about-us h2 {
+    @include center;
+  }
+
+  .services h2 {
+    @include center;
+  }
+
+  .what-we-do h2 {
+    @include center;
+    font-size: 1.7em;
+    top: 82px;
+  }
+
+  .contact-us h2 {
+    @include center;
+  }
+}
+
+@media (max-width: 630px) {
+  .gallery {
+    .item {
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .hero {
+    background-position: 80% 50%;
+  }
+  .contact-us {
+    .contact-us-content {
+      padding: 50px 15%;
+    }
+  }
+  .what-we-do h2 {
+    font-size: 1.5em;
+    top: 86px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero .hero-text p {
+    padding: 0 10px;
+  }
+  .hero .hero-text {
+    padding-top: 30%;
   }
 }

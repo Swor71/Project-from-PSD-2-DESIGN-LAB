@@ -1,4 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+@keyframes scroll {
+  0% {
+    top: 2px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 22px;
+    opacity: 0;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -35,7 +49,8 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  width: 583px;
+  max-width: 583px;
+  width: 100%;
   margin: 0 auto;
   color: #ffffff;
   font-family: Lato;
@@ -61,10 +76,29 @@
   font-weight: 400;
   line-height: 29px;
   letter-spacing: 0.9px;
+  margin-bottom: 30%;
 }
 
-.hero .hero-text .hero-scroll-down {
-  margin-top: 180px;
+.hero .hero-text .hero-scroll-down-bean {
+  height: 36px;
+  width: 20px;
+  border: 2px solid #ffffff;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50px;
+  position: relative;
+}
+
+.hero .hero-text .hero-scroll-down-bean .hero-scroll-down-line {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  background-color: #ffffff;
+  height: 8px;
+  width: 4px;
+  border-radius: 50px;
+  animation: scroll 2s infinite;
 }
 
 .about-us {
@@ -94,19 +128,19 @@
   content: "";
   border-top: 2px solid #3c3c3c;
   flex-grow: 1;
-  margin-right: 100px;
+  margin-right: 7%;
 }
 
 .about-us h2::after {
   content: "";
   border-top: 2px solid #3c3c3c;
   flex-grow: 1;
-  margin-left: 100px;
+  margin-left: 7%;
 }
 
 .about-us .about-us-text {
   padding: 50px;
-  width: 556px;
+  max-width: 556px;
   margin: 0 auto;
   text-align: center;
   color: #3c3c3c;
@@ -155,14 +189,14 @@
   content: "";
   border-top: 2px solid #ffffff;
   flex-grow: 1;
-  margin-right: 100px;
+  margin-right: 7%;
 }
 
 .services h2::after {
   content: "";
   border-top: 2px solid #ffffff;
   flex-grow: 1;
-  margin-left: 100px;
+  margin-left: 7%;
 }
 
 .services .border {
@@ -175,7 +209,7 @@
 }
 
 .services .border .services-text p {
-  width: 556px;
+  max-width: 556px;
   text-align: center;
   font-size: 16px;
   font-weight: 300;
@@ -209,14 +243,14 @@
   content: "";
   border-top: 2px solid #3c3c3c;
   flex-grow: 1;
-  margin-right: 100px;
+  margin-right: 7%;
 }
 
 .what-we-do h2::after {
   content: "";
   border-top: 2px solid #3c3c3c;
   flex-grow: 1;
-  margin-left: 100px;
+  margin-left: 7%;
 }
 
 .what-we-do .what-we-do-sections {
@@ -227,7 +261,7 @@
 
 .what-we-do .what-we-do-sections .info {
   margin: 0 auto;
-  width: 556px;
+  max-width: 556px;
   color: #3c3c3c;
   font-family: Lato;
 }
@@ -252,7 +286,7 @@
   font-size: 14px;
   font-weight: 300;
   line-height: 25.89px;
-  padding-bottom: 100px;
+  padding: 0 20px 100px;
 }
 
 .gallery {
@@ -346,14 +380,14 @@
   content: "";
   border-top: 2px solid #3c3c3c;
   flex-grow: 1;
-  margin-right: 100px;
+  margin-right: 7%;
 }
 
 .contact-us h2::after {
   content: "";
   border-top: 2px solid #3c3c3c;
   flex-grow: 1;
-  margin-left: 100px;
+  margin-left: 7%;
 }
 
 .contact-us .contact-us-content {
@@ -361,20 +395,22 @@
   font-size: 16px;
   text-align: center;
   margin: 0 auto;
-  padding: 50px 100px;
+  padding: 50px 0;
+  max-width: 556px;
+  width: 100%;
 }
 
 .contact-us .contact-us-content p {
   color: #3c3c3c;
   font-weight: 300;
   line-height: 25.89px;
-  width: 530px;
   margin: 0 auto;
 }
 
 .contact-us .contact-us-content button {
   margin-top: 40px;
-  width: 395px;
+  max-width: 395px;
+  width: 100%;
   height: 58px;
   border: 2px solid #3c3c3c;
   background-color: #3c3c3c;
@@ -414,7 +450,7 @@
 
 @media (max-width: 1024px) {
   .hero {
-    background-position: 50% 50%;
+    background-position: 70% 50%;
   }
 }
 
@@ -422,6 +458,69 @@
   .gallery .item {
     width: 40%;
     margin: 5px;
+  }
+}
+
+@media (max-width: 902px) {
+  .border {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .about-us h2 {
+    width: 95%;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .services h2 {
+    width: 95%;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .what-we-do h2 {
+    width: 95%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.7em;
+    top: 82px;
+  }
+  .contact-us h2 {
+    width: 95%;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 630px) {
+  .gallery .item {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero {
+    background-position: 80% 50%;
+  }
+  .contact-us .contact-us-content {
+    padding: 50px 15%;
+  }
+  .what-we-do h2 {
+    font-size: 1.5em;
+    top: 86px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero .hero-text p {
+    padding: 0 10px;
+  }
+  .hero .hero-text {
+    padding-top: 30%;
   }
 }
 /*# sourceMappingURL=style.css.map */
