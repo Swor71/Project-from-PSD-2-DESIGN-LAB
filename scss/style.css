@@ -73,11 +73,7 @@
 }
 
 .about-us h2 {
-  position: absolute;
   top: 130px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
   font-family: Lato;
   color: #3c3c3c;
   font-size: 34px;
@@ -85,7 +81,13 @@
   text-transform: uppercase;
   letter-spacing: 8.95px;
   padding-bottom: 50px;
-  width: 900px;
+  border-color: #3c3c3c;
+  position: absolute;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
 }
 
 .about-us h2::before {
@@ -135,16 +137,18 @@
 }
 
 .services h2 {
-  position: absolute;
   top: 80px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  width: 900px;
   font-size: 34px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 8.95px;
+  border-color: #ffffff;
+  position: absolute;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
 }
 
 .services h2::before {
@@ -191,12 +195,14 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 8.95px;
-  position: absolute;
   top: 80px;
+  border-color: #3c3c3c;
+  position: absolute;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  width: 900px;
+  max-width: 900px;
+  width: 100%;
 }
 
 .what-we-do h2::before {
@@ -326,12 +332,14 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4.76px;
-  position: absolute;
   top: -19px;
+  border-color: #3c3c3c;
+  position: absolute;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  width: 900px;
+  max-width: 900px;
+  width: 100%;
 }
 
 .contact-us h2::before {
@@ -375,7 +383,7 @@
   text-transform: uppercase;
   letter-spacing: 2.54px;
   cursor: pointer;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .contact-us .contact-us-content button:hover {
@@ -402,5 +410,18 @@
   font-size: 14px;
   font-weight: 400;
   vertical-align: middle;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    background-position: 50% 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .gallery .item {
+    width: 40%;
+    margin: 5px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -3,6 +3,40 @@
 $text-dark: #3c3c3c;
 $text-white: #ffffff;
 
+@mixin border($white) {
+  @if ($white) {
+    border-color: $text-white;
+  } @else {
+    border-color: $text-dark;
+  }
+  position: absolute;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+  &::before {
+    content: "";
+    @if ($white) {
+      border-top: 2px solid $text-white;
+    } @else {
+      border-top: 2px solid $text-dark;
+    }
+    flex-grow: 1;
+    margin-right: 100px;
+  }
+  &::after {
+    content: "";
+    @if ($white) {
+      border-top: 2px solid $text-white;
+    } @else {
+      border-top: 2px solid $text-dark;
+    }
+    flex-grow: 1;
+    margin-left: 100px;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -71,11 +105,7 @@ $text-white: #ffffff;
   padding-top: 150px;
   position: relative;
   h2 {
-    position: absolute;
     top: 130px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
     font-family: Lato;
     color: $text-dark;
     font-size: 34px;
@@ -83,19 +113,7 @@ $text-white: #ffffff;
     text-transform: uppercase;
     letter-spacing: 8.95px;
     padding-bottom: 50px;
-    width: 900px;
-    &::before {
-      content: "";
-      border-top: 2px solid $text-dark;
-      flex-grow: 1;
-      margin-right: 100px;
-    }
-    &::after {
-      content: "";
-      border-top: 2px solid $text-dark;
-      flex-grow: 1;
-      margin-left: 100px;
-    }
+    @include border(false);
   }
   .about-us-text {
     padding: 50px;
@@ -127,28 +145,12 @@ $text-white: #ffffff;
   font-family: Lato;
   position: relative;
   h2 {
-    position: absolute;
     top: 80px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    width: 900px;
     font-size: 34px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 8.95px;
-    &::before {
-      content: "";
-      border-top: 2px solid $text-white;
-      flex-grow: 1;
-      margin-right: 100px;
-    }
-    &::after {
-      content: "";
-      border-top: 2px solid $text-white;
-      flex-grow: 1;
-      margin-left: 100px;
-    }
+    @include border(true);
   }
   .border {
     border-color: $text-white;
@@ -177,24 +179,8 @@ $text-white: #ffffff;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 8.95px;
-    position: absolute;
     top: 80px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    width: 900px;
-    &::before {
-      content: "";
-      border-top: 2px solid $text-dark;
-      flex-grow: 1;
-      margin-right: 100px;
-    }
-    &::after {
-      content: "";
-      border-top: 2px solid $text-dark;
-      flex-grow: 1;
-      margin-left: 100px;
-    }
+    @include border(false);
   }
   .what-we-do-sections {
     padding-top: 100px;
@@ -296,24 +282,8 @@ $text-white: #ffffff;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 4.76px;
-    position: absolute;
     top: -19px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    width: 900px;
-    &::before {
-      content: "";
-      border-top: 2px solid $text-dark;
-      flex-grow: 1;
-      margin-right: 100px;
-    }
-    &::after {
-      content: "";
-      border-top: 2px solid $text-dark;
-      flex-grow: 1;
-      margin-left: 100px;
-    }
+    @include border(false);
   }
   .contact-us-content {
     font-family: Lato;
@@ -339,10 +309,10 @@ $text-white: #ffffff;
       text-transform: uppercase;
       letter-spacing: 2.54px;
       cursor: pointer;
-      transition: .4s;
+      transition: 0.4s;
       &:hover {
         transform: translateY(-4px);
-        box-shadow: 2px 4px 4px rgba($text-dark, .6);
+        box-shadow: 2px 4px 4px rgba($text-dark, 0.6);
       }
     }
   }
@@ -362,6 +332,21 @@ $text-white: #ffffff;
       font-size: 14px;
       font-weight: 400;
       vertical-align: middle;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    background-position: 50% 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .gallery {
+    .item {
+      width: 40%;
+      margin: 5px;
     }
   }
 }
