@@ -472,6 +472,19 @@
   vertical-align: middle;
 }
 
+.footer .portfolio {
+  font-family: Lato;
+  padding-top: 10px;
+  text-align: center;
+  display: block;
+  color: #3c3c3c;
+}
+
+.footer .portfolio a {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+
 @media (max-width: 1024px) {
   .hero {
     background-position: 70% 50%;
@@ -530,6 +543,9 @@
   .hero {
     background-position: 80% 50%;
   }
+  .hero .hero-text {
+    padding-top: 30%;
+  }
   .contact-us .contact-us-content {
     padding: 50px 15%;
   }
@@ -542,9 +558,6 @@
 @media (max-width: 320px) {
   .hero .hero-text p {
     padding: 0 10px;
-  }
-  .hero .hero-text {
-    padding-top: 30%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -368,6 +368,17 @@ $text-white: #ffffff;
       vertical-align: middle;
     }
   }
+  .portfolio {
+    font-family: Lato;
+    padding-top: 10px;
+    text-align: center;
+    display: block;
+    color: $text-dark;
+    a {
+      text-decoration: none;
+      color: $text-dark;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
@@ -431,6 +442,9 @@ $text-white: #ffffff;
   .hero {
     background-position: 80% 50%;
   }
+  .hero .hero-text {
+    padding-top: 30%;
+  }
   .contact-us {
     .contact-us-content {
       padding: 50px 15%;
@@ -445,8 +459,5 @@ $text-white: #ffffff;
 @media (max-width: 320px) {
   .hero .hero-text p {
     padding: 0 10px;
-  }
-  .hero .hero-text {
-    padding-top: 30%;
   }
 }
