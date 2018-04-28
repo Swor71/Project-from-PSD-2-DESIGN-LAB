@@ -28,7 +28,7 @@ $text-white: #ffffff;
 
 .hero {
   background-image: url(../images/hero-background.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   min-height: 929px;
   .hero-text {
@@ -68,7 +68,7 @@ $text-white: #ffffff;
 }
 
 .about-us {
-  padding: 150px 0;
+  padding-top: 150px;
   position: relative;
   h2 {
     position: absolute;
@@ -117,11 +117,12 @@ $text-white: #ffffff;
 }
 
 .services {
-  padding: 100px;
+  padding: 100px 0;
+  margin-top: 100px;
   color: $text-white;
   background-image: url(../images/services-background.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 100%;
   font-family: Lato;
   position: relative;
@@ -162,6 +163,205 @@ $text-white: #ffffff;
         line-height: 25.89px;
         margin: 0 auto;
       }
+    }
+  }
+}
+
+.what-we-do {
+  padding: 100px 0;
+  position: relative;
+  h2 {
+    color: $text-dark;
+    font-family: Lato;
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 8.95px;
+    position: absolute;
+    top: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 900px;
+    &::before {
+      content: "";
+      border-top: 2px solid $text-dark;
+      flex-grow: 1;
+      margin-right: 100px;
+    }
+    &::after {
+      content: "";
+      border-top: 2px solid $text-dark;
+      flex-grow: 1;
+      margin-left: 100px;
+    }
+  }
+  .what-we-do-sections {
+    padding-top: 100px;
+    color: $text-dark;
+    text-align: center;
+    .info {
+      margin: 0 auto;
+      width: 556px;
+      color: $text-dark;
+      font-family: Lato;
+      img {
+        transition: 0.4s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      h3 {
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 5.26px;
+        padding: 40px 0;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 25.89px;
+        padding-bottom: 100px;
+      }
+    }
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  .item {
+    flex-grow: 1;
+    width: 25%;
+    height: 250px;
+    margin: 5px;
+    position: relative;
+    transition: 0.4s;
+    span {
+      color: $text-white;
+      font-family: Lato;
+      font-size: 34px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 8.95px;
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+    }
+    &:hover {
+      flex-grow: 2;
+      cursor: pointer;
+    }
+  }
+
+  .top-left {
+    background-image: url(../images/gallery-top-left.png);
+    background-size: cover;
+    margin-left: 0;
+  }
+  .top-mid {
+    background-image: url(../images/gallery-top-mid.png);
+    background-size: cover;
+  }
+  .top-right {
+    background-image: url(../images/gallery-top-right.png);
+    background-size: cover;
+    margin-right: 0;
+  }
+  .bot-left {
+    background-image: url(../images/gallery-bot-left.png);
+    background-size: cover;
+    margin-left: 0;
+  }
+  .bot-mid {
+    background-image: url(../images/gallery-bot-mid.png);
+    background-size: cover;
+  }
+  .bot-right {
+    background-image: url(../images/gallery-bot-right.png);
+    background-size: cover;
+    margin-right: 0;
+  }
+}
+
+.contact-us {
+  margin-top: 100px;
+  position: relative;
+  h2 {
+    color: $text-dark;
+    font-family: Lato;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4.76px;
+    position: absolute;
+    top: -19px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 900px;
+    &::before {
+      content: "";
+      border-top: 2px solid $text-dark;
+      flex-grow: 1;
+      margin-right: 100px;
+    }
+    &::after {
+      content: "";
+      border-top: 2px solid $text-dark;
+      flex-grow: 1;
+      margin-left: 100px;
+    }
+  }
+  .contact-us-content {
+    font-family: Lato;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px 100px;
+    p {
+      color: $text-dark;
+      font-weight: 300;
+      line-height: 25.89px;
+      width: 530px;
+      margin: 0 auto;
+    }
+    button {
+      margin-top: 40px;
+      width: 395px;
+      height: 58px;
+      border: 2px solid $text-dark;
+      background-color: $text-dark;
+      color: $text-white;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2.54px;
+      cursor: pointer;
+      transition: .4s;
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 2px 4px 4px rgba($text-dark, .6);
+      }
+    }
+  }
+}
+
+.footer {
+  margin: 60px 0;
+  .footer-content {
+    text-align: center;
+    img {
+      vertical-align: middle;
+      padding-right: 40px;
+    }
+    span {
+      color: $text-dark;
+      font-family: Lato;
+      font-size: 14px;
+      font-weight: 400;
+      vertical-align: middle;
     }
   }
 }
